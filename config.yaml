@@ -1,0 +1,43 @@
+data:
+  data_dir: ../data
+  download_dir: ${.data_dir}/ding_et_al
+  multiclass:
+    smiles: ${..data_dir}/full_iPhos_lipids.csv
+    target: ${..data_dir}/iphos_targets.csv
+    helper_lipids: ${..data_dir}/all_data.csv
+    output: ${..data_dir}/iphos_multiclass.csv
+
+tournament:
+  data_path: ../data/iphos_multiclass.csv
+  output_dir: ./results_multiclass
+  fingerprints: [../data/mol2fp_CFP.json]
+  train:
+    seed: 42
+    multiclass: true
+    hyperparameters:
+      batch_size: 64
+      epochs: 5000
+      patience: 500
+      learning_rate: 0.005
+      conv_width: 32
+      conv_depth: 2
+      conv_dropout: 0.3
+      dense_width: 32
+      dense_dropout: 0.3
+
+embeddings:
+  input_file:
+  output_file:
+  method: rdkit # or cfp
+
+fingerprints:
+  smiles_path: ../data/iphos_smiles.txt
+  fingerprint_path: ../data/iphos_smiles.npz
+  type: cfp # or expert, grover, gcn
+  output_path: ../data/mol2fp_test.json
+
+plotting:
+  data_path: ../data/iphos_multiclass.csv
+  binary_metrics: ../results_binary/metrics.pkl
+  multiclass_metrics: ../results_multiclass/metrics.pkl
+  save_path: ../colormesh_barplot.png
