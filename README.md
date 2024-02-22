@@ -23,5 +23,3 @@ We organize our code into the following structure:
 - `data`: contains all data used in our experiments. This includes CSVs with lipids SMILES and properties, and corresponding fingerprint JSON files from different embedding methods. Those ending in `_alldata` correspond to SMILES from *Ding et al*.
 - `src`: contains the source code for downloading data from *Ding et al.*, splitting data for multiclass classification, running the tournament script for classification, and some helpers.
 - `notebooks`: contains notebooks for data exploration, as well as gcn training and embedding extraction, and downstream classification with different methods.
-
-[LNP Design Pipeline](lnp-design-diagram.png)
