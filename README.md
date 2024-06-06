@@ -27,7 +27,7 @@ We organize our code into the following structure:
 ## Fine-Tuning MegaMolBART 
 We found that the best performing model for predicting LNP transfection efficiency relies on embedding LNPs with a large language model. Here we outline our method for finetuning NVIDIA's MegaMolBART model on the swisslipid dataset.
 
-1. Download, Install and Setup MegaMolBART pre-trained model. We recommend installing using the container.
+1. Download, install and setup the MegaMolBART pre-trained model. We recommend installing using the container.
   - [repository](https://github.com/NVIDIA/MegaMolBART)
   - [tutorial](https://docs.nvidia.com/bionemo-framework/0.4.0/notebooks/MMB_GenerativeAI_Inference_with_examples.html) 
 2. Download the [swisslipid dataset](https://www.swisslipids.org/)
