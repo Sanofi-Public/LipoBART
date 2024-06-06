@@ -36,6 +36,6 @@ We found that the best performing model for predicting LNP transfection efficien
   - adjust `trainer` and `batch_size` params optimal to your system settings (number and memory of GPUs)
   - `dataset_path` is set to the location of the downloaded swisslipid dataset.
     -   *edit the swisslipid dataset such that it conforms to the datamodel of the MegaMolBART example dataset. Split the data into 99% training 0.5% test, 0.5% validation*
-4. Run the pre-training script with this configuration ([instructions here] (https://github.com/NVIDIA/MegaMolBART/blob/dev/QUICKSTART.md#training-megamolbart))
+4. Run the pre-training script with this configuration ([instructions here](https://github.com/NVIDIA/MegaMolBART/blob/dev/QUICKSTART.md#training-megamolbart))
 5. Stop training once validation_molecular_accuracy converges
   
